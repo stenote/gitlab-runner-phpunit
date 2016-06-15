@@ -11,6 +11,8 @@ $ docker build -t 'stenote/gitlab-runner-phpunit' .
 
 ### 使用
 
+`.gitlab-ci.yml` 增加如下配置即可使用
+
 ```yaml
 image: stenote/gitlab-runner-phpunit
 
@@ -18,5 +20,3 @@ test:app:
   script:
   - phpunit
 ```
-
-增加如上配置即可
