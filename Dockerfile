@@ -1,6 +1,9 @@
 FROM php:alpine
 
-RUN apk add --no-cache git wget unzip
+RUN apk add --no-cache git wget unzip g++ make autoconf
+
+RUN pecl install xdebug && \
+    docker-php-ext-enable xdebug
 
 RUN wget https://getcomposer.org/composer.phar && \
     chmod a+x composer.phar && \
