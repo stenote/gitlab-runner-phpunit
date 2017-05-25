@@ -1,7 +1,6 @@
-FROM php:7
+FROM php:alpine
 
-RUN apt-get update && \
-    apt-get install -y git wget unzip
+RUN apk add --no-cache git wget unzip
 
 RUN wget https://getcomposer.org/composer.phar && \
     chmod a+x composer.phar && \
