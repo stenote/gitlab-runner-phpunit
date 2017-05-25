@@ -6,6 +6,6 @@ RUN wget https://getcomposer.org/composer.phar && \
     chmod a+x composer.phar && \
     mv composer.phar /usr/local/bin/composer
 
-RUN composer global require phpunit/phpunit
+RUN composer global require phpunit/phpunit phpunit/php-code-coverage
 
 ENV PATH $PATH:/root/.composer/vendor/bin
